@@ -12,10 +12,26 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
 
+let bed = [1,0,0,0,1];
+let n = 1;
+
+let bed2 = [1,0,0,0,1];
+let n2 = 2;
 
 function flowerbed(arr, n){
-    
-    // for(){
+    let count = 0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] == 0){
+            let prev = arr[i-1] || 0;
+            let next = arr[i+1] || 0;
 
-    // }
+            if(prev == 0 && next == 0){
+                arr[i] = 1;
+                count++;
+            }
+        }
+    }
+    return count >= n;
 }
+
+console.log(flowerbed(bed, n));

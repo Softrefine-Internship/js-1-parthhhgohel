@@ -8,9 +8,16 @@ let str = "025468";
 
 let ans = "";
 
-function dashedStr(){
+function dashedStr(str){
+    ans += str[0];
     for(let i=1; i<str.length; i++){
-        str.at
+        if(str[i-1]%2 === 0 && str[i]%2 === 0){
+            ans += "-";
+        }
+        ans += str[i];
     }
+
+    return ans;
 }
-console.log();
+
+console.log(dashedStr(str));

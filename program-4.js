@@ -22,7 +22,7 @@ const bubSort = (arr) => {
     }
     return arr;
 }
-
+// Function
 function mergeSorted(arr1, arr2) {
     if (arr1.length === 0) {
         let ans = arr1.sort();
